@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <html>
+    <script>
+        function openPage(pageName, elmnt, color) {
+  // Hide all elements with class="tabcontent" by default */
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove the background color of all tablinks/buttons
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+
+  // Show the specific tab content
+  document.getElementById(pageName).style.display = "block";
+
+  // Add the specific color to the button used to open the tab content
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+    </script>
     <link rel="stylesheet" href="stylesheet.css">
         <h1>Here are all of the careers you can choose from!</h1>
         <div class="topnav">
@@ -9,14 +34,13 @@
             <a href="beprepared.html">Preparation</a>
             <a href="studentexperiences.html">Student Experiences</a>
           </div>
-        <p style="background-color:gray;">Software engineer, hacker, project lead, programmer, website designer,
-            database development and management, etc.
-        </p>
+        <br>
+        <br>
 
-<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+<button class="tablink" onclick="openPage('Home', this, 'teal')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'white')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'white')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'white')">About</button>
 
 <div id="Home" class="tabcontent">
   <h3>Home</h3>
