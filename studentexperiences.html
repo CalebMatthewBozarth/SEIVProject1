@@ -2,69 +2,44 @@
 <html>
     <link rel="stylesheet" href="stylesheet.css">
     <style>
-        * {
-          box-sizing: border-box;
-        }
-        
-        body {
-          font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        /* Style the header */
-        header {
-          background-color: #666;
-          padding: 20px;
-          text-align: center;
-          font-size: 20px;
-          color: Black;
-        }
-        
-        /* Container for flexboxes */
-        section {
-          display: -webkit-flex;
-          display: flex;
-        }
-        
-        /* Style the navigation menu */
-        nav {
-          -webkit-flex: 1;
-          -ms-flex: 1;
-          flex: 1;
-          background: #ccc;
-          padding: 20px;
-        }
-        
-        /* Style the list inside the menu */
-        nav ul {
-          list-style-type: none;
-          padding: 0;
-        }
-        
-        /* Style the content */
-        article {
-          -webkit-flex: 3;
-          -ms-flex: 3;
-          flex: 3;
-          background-color: #f1f1f1;
-          padding: 10px;
-        }
-        
-        /* Style the footer */
-        footer {
-          background-color: #777;
-          padding: 10px;
-          text-align: center;
-          color: white;
-        }
-        
-        /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-        @media (max-width: 450px) {
-          section {
-            -webkit-flex-direction: column;
-            flex-direction: column;
-          }
-        }
-        </style>
+
+.row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-orient: horizontal; 
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    flex-direction: row;
+
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;  
+    align-items: center;
+
+}
+.cell {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto; 
+
+    padding: 10px;
+    margin: 10px;
+
+    text-align: center;
+
+}
+    </style>
     <body>
         <h1>Student Experiences</h1>
         <div class="topnav">
@@ -74,27 +49,27 @@
             <a href="beprepared.html">Preparation</a>
             <a class="active" href="studentexperiences.html">Student Experiences</a>
           </div>
-        <p>"We do a great deal of work, and we hate work. 10/10</p>
-
-
-        <header>
-            <h2>Cities</h2>
-          </header>
-          
-          <section>
-            <nav>
-              <ul>
-                <li><a href="#">Ryan Jennings</a></li>
-                <li><a href="#">Caleb Bozarth</a></li>
-                <li><a href="#">Jonathan Troyer</a></li>
-              </ul>
-            </nav>
+          <div class="content">
+            <div class="row">
+              <div class="cell">
+                <div><img src="ryan face.JPEG" style="height: 300px; width: 450px">
+                  <h2>Ryan Jennings</h2>
+                  <p>At Oklahoma Christian, I have consistently been challenged in my academics. There is 
+                    always something new to learn. The vast amount of content available can be overwhelming,
+                    but the teachers are always readily available to help you. On top of that, there are so many
+                    online resources that can help with classes, it is very realistic to consistently succeed
+                    in the Computer Science program. Upperclassmen are extremely kind and helpful, and are 
+                    always willing to give advice on how to work smarter and be successful. 
+                  </p>
+                </div>
+                <div class="cell">
+                  <div><img src="myface.JPG"></div>
+                  <h2>Caleb Bozarth</h2>
+                </div>
+              </div>
+            </div>
             
-            <article>
-              <h2>Ryan Jennings</h2>
-<p>Ryan Jennins is a model citizen, classy gentleman, and overall nice guy. He is also a real athlete, unlike Caleb Bozarth</p>>             
-            </article>
-          </section>
+          </div>
           
     </body>
 </html>
